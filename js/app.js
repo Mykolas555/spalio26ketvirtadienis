@@ -93,3 +93,187 @@ switch (language){
 let weather = 20;
 let userName = weather >19 ? "andrius":"karolis";
 console.log(userName)
+
+
+/*ciklai*/
+/*
+let items = ['phone', 'pencil', 'box', 'table']
+
+let user = {
+    id:1,
+    name:"jonas",
+    email:"jonux@kazkas.lt",
+    role:"admin"
+}
+
+/*for (let i=0;i<items.length; i++){
+    console.log(items[i])
+}
+*/
+
+/*for(let item in items){
+    console.log(items[item])
+}
+*/
+
+/*negali eiti per objekta
+
+for(let item of items){
+    console.log(item)
+}
+*/
+
+/*for(let userDate in user){
+    console.log(`${userData}:${user[userDate]}`)
+}
+*/
+
+
+let students = [
+    {
+        id:1,
+        firstName:"tadas",
+        lastname:"tadauskas",
+        email:"tadas@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:2,
+        firstName:"ieva",
+        lastname:"tadauske",
+        email:"ieva@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:3,
+        firstName:"ona",
+        lastname:"tadauskis",
+        email:"ona@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:4,
+        firstName:"tadas",
+        lastname:"tadauskas",
+        email:"tadas@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:5,
+        firstName:"petras",
+        lastname:"tadauschis",
+        email:"petras@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    }
+]
+
+/* isvesti studentus tokiu butu:
+
+studentai:
+-----------
+petras
+tadauschis
+petras@tadaushis.lt
+grupe: students
+------------
+(kitas studentas)
+*/
+
+/* 
+for (let student in students){
+    console.log('------------');
+    for(let studentData in student){
+        if(studentData==='group'){
+            console.log(`grupe:${students[studentData])`};
+        console.log(student[studentData])
+    }
+}
+
+*/
+
+for(let student of students){
+    console.log('---------------');
+    for (let studentData in student){
+        if(studentData === 'group'){
+            console.log(`grupe:${student[studentData]}`);
+        }else{
+            if(studentData=='marks'){
+                console.log('ivertinimai:');
+                for(marks of student[studentData]){
+                    console.log(`${marks.subject}:${marks.mark}`)
+               }
+            }
+            console.log(student[studentData]);
+        }
+    }
+}
